@@ -24,6 +24,7 @@ app.get("/", (req, res) => {
             <li><a href="/about">About</a></li>
             <li><a href="/health">Health</a></li>
             <li><a href="/api/users">Users API</a></li>
+            <li><a href="/api/version">API Version</a></li>
             <li><a href="/hello/Faheem">Dynamic Route</a></li>
         </ul>
     `);
@@ -33,6 +34,11 @@ app.get("/", (req, res) => {
 app.get("/about", (req, res) => {
     res.send("<h2>This is the About Page.</h2>");
 });
+
+app.get("/api/version", (req, res) => {
+    res.send("<h2>API Version:0.1</h2>");
+});
+
 
 // Health Check
 app.get("/health", (req, res) => {
